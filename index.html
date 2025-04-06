@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исторические карты России</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style> .historical-map { display: none; margin-top: 50px; width: 70%; height: auto; } .historical-map.active { display: block; } select { padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #ccc; margin-top: 20px; } label { display: inline-block; margin-right: 10px; font-weight: bold; } </style>
+      </head>
+      <body>
+
+    <!-- Авторизация -->
+    <div class="login-form" id="login-form">
+      <form id="loginForm">
+        <label for="username">Логин:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Войти</button>
+      </form>
+      <p id="errorMessage"></p>
+    </div>
+
+    <!-- Скрытое до успешного входа: -->
+    <div id="main-content" style="display: none;">
+      <h1>Исторические карты России с 1900 до 2000 года</h1>
+
+    <div id="maps-container">
+      <img src="Start.png" alt="Начальная карта" class="historical-map active" id="start-image" usemap="#map1899">
+      <map name="map1899">
+          <area shape="circle" coords="80,140,25" href="#" class="map-area" />
+          <area shape="rect" coords="180,80,280,180" href="#" class="map-area" />
+      </map>
+
+        <img src="russia-map-1900.png" alt="Карта России 1900 года" class="historical-map" id="map-1900" usemap="#map1900">
+        <map name="map1900">
+            <area shape="circle" coords="100,150,25" href="#" class="map-area" />
+            <area shape="rect" coords="200,100,300,200" href="#" class="map-area" />
+        </map>
+
+        <img src="russia-map-1901.png" alt="Карта России 1901 года" class="historical-map" id="map-1901" usemap="#map1901">
+        <map name="map1901">
+            <area shape="circle" coords="120,160,25" href="#" class="map-area" />
+            <area shape="rect" coords="220,120,320,220" href="#" class="map-area" />
+        </map>
+
+        <img src="russia-map-1902.png" alt="Карта России 1902 года" class="historical-map" id="map-1902" usemap="#map1902">
+        <map name="map1902">
+            <area shape="circle" coords="120,160,25" href="#" class="map-area" />
+            <area shape="rect" coords="220,120,320,220" href="#" class="map-area" />
+        </map>
+
+        <img src="russia-map-1903.png" alt="Карта России 1903 года" class="historical-map" id="map-1903" usemap="#map1903">
+        <map name="map1903">
+            <area shape="circle" coords="120,160,25" href="#" class="map-area" />
+            <area shape="rect" coords="220,120,320,220" href="#" class="map-area" />
+        </map>
+
+<img src="russia-map-1904.png" alt="Карта России 1904 года" class="historical-map" id="map-1904" usemap="#map1904">
+<map name="map1904">
+    <area shape="circle" coords="180,190,25" href="#" class="map-area" />
+    <area shape="rect" coords="280,180,380,280" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1905.png" alt="Карта России 1905 года" class="historical-map" id="map-1905" usemap="#map1905">
+<map name="map1905">
+    <area shape="circle" coords="200,200,25" href="#" class="map-area" />
+    <area shape="rect" coords="300,200,400,300" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1906.png" alt="Карта России 1906 года" class="historical-map" id="map-1906" usemap="#map1906">
+<map name="map1906">
+    <area shape="circle" coords="220,210,25" href="#" class="map-area" />
+    <area shape="rect" coords="320,220,420,320" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1907.png" alt="Карта России 1907 года" class="historical-map" id="map-1907" usemap="#map1907">
+<map name="map1907">
+    <area shape="circle" coords="240,220,25" href="#" class="map-area" />
+    <area shape="rect" coords="340,240,440,340" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1908.png" alt="Карта России 1908 года" class="historical-map" id="map-1908" usemap="#map1908">
+<map name="map1908">
+    <area shape="circle" coords="260,230,25" href="#" class="map-area" />
+    <area shape="rect" coords="360,260,460,360" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1909.png" alt="Карта России 1909 года" class="historical-map" id="map-1909" usemap="#map1909">
+<map name="map1909">
+    <area shape="circle" coords="280,240,25" href="#" class="map-area" />
+    <area shape="rect" coords="380,280,480,380" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1910.png" alt="Карта России 1910 года" class="historical-map" id="map-1910" usemap="#map1910">
+<map name="map1910">
+    <area shape="circle" coords="300,250,25" href="#" class="map-area" />
+    <area shape="rect" coords="400,300,500,400" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1911.png" alt="Карта России 1911 года" class="historical-map" id="map-1911" usemap="#map1911">
+<map name="map1911">
+    <area shape="circle" coords="320,260,25" href="#" class="map-area" />
+    <area shape="rect" coords="420,320,520,420" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1912.png" alt="Карта России 1912 года" class="historical-map" id="map-1912" usemap="#map1912">
+<map name="map1912">
+    <area shape="circle" coords="340,270,25" href="#" class="map-area" />
+    <area shape="rect" coords="440,340,540,440" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1913.png" alt="Карта России 1913 года" class="historical-map" id="map-1913" usemap="#map1913">
+<map name="map1913">
+    <area shape="circle" coords="360,280,25" href="#" class="map-area" />
+    <area shape="rect" coords="460,360,560,460" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1914.png" alt="Карта России 1914 года" class="historical-map" id="map-1914" usemap="#map1914">
+<map name="map1914">
+    <area shape="circle" coords="380,290,25" href="#" class="map-area" />
+    <area shape="rect" coords="480,380,580,480" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1915.png" alt="Карта России 1915 года" class="historical-map" id="map-1915" usemap="#map1915">
+<map name="map1915">
+    <area shape="circle" coords="400,300,25" href="#" class="map-area" />
+    <area shape="rect" coords="500,400,600,500" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1916.png" alt="Карта России 1916 года" class="historical-map" id="map-1916" usemap="#map1916">
+<map name="map1916">
+    <area shape="circle" coords="420,310,25" href="#" class="map-area" />
+    <area shape="rect" coords="520,420,620,520" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1917.png" alt="Карта России 1917 года" class="historical-map" id="map-1917" usemap="#map1917">
+<map name="map1917">
+    <area shape="circle" coords="440,320,25" href="#" class="map-area" />
+    <area shape="rect" coords="540,440,640,540" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1918.png" alt="Карта России 1918 года" class="historical-map" id="map-1918" usemap="#map1918">
+<map name="map1918">
+    <area shape="circle" coords="460,330,25" href="#" class="map-area" />
+    <area shape="rect" coords="560,460,660,560" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1919.png" alt="Карта России 1919 года" class="historical-map" id="map-1919" usemap="#map1919">
+<map name="map1919">
+    <area shape="circle" coords="480,340,25" href="#" class="map-area" />
+    <area shape="rect" coords="580,480,680,580" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1920.png" alt="Карта России 1920 года" class="historical-map" id="map-1920" usemap="#map1920">
+<map name="map1920">
+    <area shape="circle" coords="500,350,25" href="#" class="map-area" />
+    <area shape="rect" coords="600,500,700,600" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1921.png" alt="Карта России 1921 года" class="historical-map" id="map-1921" usemap="#map1921">
+<map name="map1921">
+    <area shape="circle" coords="520,360,25" href="#" class="map-area" />
+    <area shape="rect" coords="620,520,720,620" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1922.png" alt="Карта России 1922 года" class="historical-map" id="map-1922" usemap="#map1922">
+<map name="map1922">
+    <area shape="circle" coords="540,370,25" href="#" class="map-area" />
+    <area shape="rect" coords="640,540,740,640" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1923.png" alt="Карта России 1923 года" class="historical-map" id="map-1923" usemap="#map1923">
+<map name="map1923">
+    <area shape="circle" coords="560,380,25" href="#" class="map-area" />
+    <area shape="rect" coords="660,560,760,660" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1924.png" alt="Карта России 1924 года" class="historical-map" id="map-1924" usemap="#map1924">
+<map name="map1924">
+    <area shape="circle" coords="580,390,25" href="#" class="map-area" />
+    <area shape="rect" coords="680,580,780,680" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1925.png" alt="Карта России 1925 года" class="historical-map" id="map-1925" usemap="#map1925">
+<map name="map1925">
+    <area shape="circle" coords="600,400,25" href="#" class="map-area" />
+    <area shape="rect" coords="700,600,800,700" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1926.png" alt="Карта России 1926 года" class="historical-map" id="map-1926" usemap="#map1926">
+<map name="map1926">
+    <area shape="circle" coords="620,410,25" href="#" class="map-area" />
+    <area shape="rect" coords="720,620,820,720" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1927.png" alt="Карта России 1927 года" class="historical-map" id="map-1927" usemap="#map1927">
+<map name="map1927">
+    <area shape="circle" coords="640,420,25" href="#" class="map-area" />
+    <area shape="rect" coords="740,640,840,740" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1928.png" alt="Карта России 1928 года" class="historical-map" id="map-1928" usemap="#map1928">
+<map name="map1928">
+    <area shape="circle" coords="660,430,25" href="#" class="map-area" />
+    <area shape="rect" coords="760,660,860,760" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1929.png" alt="Карта России 1929 года" class="historical-map" id="map-1929" usemap="#map1929">
+<map name="map1929">
+    <area shape="circle" coords="680,440,25" href="#" class="map-area" />
+    <area shape="rect" coords="780,680,880,780" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1930.png" alt="Карта России 1930 года" class="historical-map" id="map-1930" usemap="#map1930">
+<map name="map1930">
+    <area shape="circle" coords="700,450,25" href="#" class="map-area" />
+    <area shape="rect" coords="800,700,900,800" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1931.png" alt="Карта России 1931 года" class="historical-map" id="map-1931" usemap="#map1931">
+<map name="map1931">
+    <area shape="circle" coords="720,460,25" href="#" class="map-area" />
+    <area shape="rect" coords="820,720,920,820" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1932.png" alt="Карта России 1932 года" class="historical-map" id="map-1932" usemap="#map1932">
+<map name="map1932">
+    <area shape="circle" coords="740,470,25" href="#" class="map-area" />
+    <area shape="rect" coords="840,740,940,840" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1933.png" alt="Карта России 1933 года" class="historical-map" id="map-1933" usemap="#map1933">
+<map name="map1933">
+    <area shape="circle" coords="760,480,25" href="#" class="map-area" />
+    <area shape="rect" coords="860,760,960,860" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1934.png" alt="Карта России 1934 года" class="historical-map" id="map-1934" usemap="#map1934">
+<map name="map1934">
+    <area shape="circle" coords="780,490,25" href="#" class="map-area" />
+    <area shape="rect" coords="880,780,980,880" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1935.png" alt="Карта России 1935 года" class="historical-map" id="map-1935" usemap="#map1935">
+<map name="map1935">
+    <area shape="circle" coords="800,500,25" href="#" class="map-area" />
+    <area shape="rect" coords="900,800,1000,900" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1936.png" alt="Карта России 1936 года" class="historical-map" id="map-1936" usemap="#map1936">
+<map name="map1936">
+    <area shape="circle" coords="820,510,25" href="#" class="map-area" />
+    <area shape="rect" coords="920,820,1020,920" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1937.png" alt="Карта России 1937 года" class="historical-map" id="map-1937" usemap="#map1937">
+<map name="map1937">
+    <area shape="circle" coords="840,520,25" href="#" class="map-area" />
+    <area shape="rect" coords="940,840,1040,940" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1938.png" alt="Карта России 1938 года" class="historical-map" id="map-1938" usemap="#map1938">
+<map name="map1938">
+    <area shape="circle" coords="860,530,25" href="#" class="map-area" />
+    <area shape="rect" coords="960,860,1060,960" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1939.png" alt="Карта России 1939 года" class="historical-map" id="map-1939" usemap="#map1939">
+<map name="map1939">
+    <area shape="circle" coords="880,540,25" href="#" class="map-area" />
+    <area shape="rect" coords="980,880,1080,980" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1940.png" alt="Карта России 1940 года" class="historical-map" id="map-1940" usemap="#map1940">
+<map name="map1940">
+    <area shape="circle" coords="900,550,25" href="#" class="map-area" />
+    <area shape="rect" coords="1000,900,1100,1000" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1941.png" alt="Карта России 1941 года" class="historical-map" id="map-1941" usemap="#map1941">
+<map name="map1941">
+    <area shape="circle" coords="920,560,25" href="#" class="map-area" />
+    <area shape="rect" coords="1020,920,1120,1020" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1942.png" alt="Карта России 1942 года" class="historical-map" id="map-1942" usemap="#map1942">
+<map name="map1942">
+    <area shape="circle" coords="940,570,25" href="#" class="map-area" />
+    <area shape="rect" coords="1040,940,1140,1040" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1943.png" alt="Карта России 1943 года" class="historical-map" id="map-1943" usemap="#map1943">
+<map name="map1943">
+    <area shape="circle" coords="960,580,25" href="#" class="map-area" />
+    <area shape="rect" coords="1060,960,1160,1060" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1944.png" alt="Карта России 1944 года" class="historical-map" id="map-1944" usemap="#map1944">
+<map name="map1944">
+    <area shape="circle" coords="980,590,25" href="#" class="map-area" />
+    <area shape="rect" coords="1080,980,1180,1080" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1945.png" alt="Карта России 1945 года" class="historical-map" id="map-1945" usemap="#map1945">
+<map name="map1945">
+    <area shape="circle" coords="1000,600,25" href="#" class="map-area" />
+    <area shape="rect" coords="1100,1000,1200,1100" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1946.png" alt="Карта России 1946 года" class="historical-map" id="map-1946" usemap="#map1946">
+<map name="map1946">
+    <area shape="circle" coords="1020,610,25" href="#" class="map-area" />
+    <area shape="rect" coords="1120,1020,1220,1120" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1947.png" alt="Карта России 1947 года" class="historical-map" id="map-1947" usemap="#map1947">
+<map name="map1947">
+    <area shape="circle" coords="1040,620,25" href="#" class="map-area" />
+    <area shape="rect" coords="1140,1040,1240,1140" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1948.png" alt="Карта России 1948 года" class="historical-map" id="map-1948" usemap="#map1948">
+<map name="map1948">
+    <area shape="circle" coords="1060,630,25" href="#" class="map-area" />
+    <area shape="rect" coords="1160,1060,1260,1160" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1949.png" alt="Карта России 1949 года" class="historical-map" id="map-1949" usemap="#map1949">
+<map name="map1949">
+    <area shape="circle" coords="1080,640,25" href="#" class="map-area" />
+    <area shape="rect" coords="1180,1080,1280,1180" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1950.png" alt="Карта России 1950 года" class="historical-map" id="map-1950" usemap="#map1950">
+<map name="map1950">
+    <area shape="circle" coords="1100,650,25" href="#" class="map-area" />
+    <area shape="rect" coords="1200,1100,1300,1200" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1951.png" alt="Карта России 1951 года" class="historical-map" id="map-1951" usemap="#map1951">
+<map name="map1951">
+    <area shape="circle" coords="1120,660,25" href="#" class="map-area" />
+    <area shape="rect" coords="1220,1120,1320,1220" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1952.png" alt="Карта России 1952 года" class="historical-map" id="map-1952" usemap="#map1952">
+<map name="map1952">
+    <area shape="circle" coords="1140,670,25" href="#" class="map-area" />
+    <area shape="rect" coords="1240,1140,1340,1240" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1953.png" alt="Карта России 1953 года" class="historical-map" id="map-1953" usemap="#map1953">
+<map name="map1953">
+    <area shape="circle" coords="1160,680,25" href="#" class="map-area" />
+    <area shape="rect" coords="1260,1160,1360,1260" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1954.png" alt="Карта России 1954 года" class="historical-map" id="map-1954" usemap="#map1954">
+<map name="map1954">
+    <area shape="circle" coords="1180,690,25" href="#" class="map-area" />
+    <area shape="rect" coords="1280,1180,1380,1280" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1955.png" alt="Карта России 1955 года" class="historical-map" id="map-1955" usemap="#map1955">
+<map name="map1955">
+    <area shape="circle" coords="1200,700,25" href="#" class="map-area" />
+    <area shape="rect" coords="1300,1200,1400,1300" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1956.png" alt="Карта России 1956 года" class="historical-map" id="map-1956" usemap="#map1956">
+<map name="map1956">
+    <area shape="circle" coords="1220,710,25" href="#" class="map-area" />
+    <area shape="rect" coords="1320,1220,1420,1320" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1957.png" alt="Карта России 1957 года" class="historical-map" id="map-1957" usemap="#map1957">
+<map name="map1957">
+    <area shape="circle" coords="1240,720,25" href="#" class="map-area" />
+    <area shape="rect" coords="1340,1240,1440,1340" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1958.png" alt="Карта России 1958 года" class="historical-map" id="map-1958" usemap="#map1958">
+<map name="map1958">
+    <area shape="circle" coords="1260,730,25" href="#" class="map-area" />
+    <area shape="rect" coords="1360,1260,1460,1360" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1959.png" alt="Карта России 1959 года" class="historical-map" id="map-1959" usemap="#map1959">
+<map name="map1959">
+    <area shape="circle" coords="1280,740,25" href="#" class="map-area" />
+    <area shape="rect" coords="1380,1280,1480,1380" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1960.png" alt="Карта России 1960 года" class="historical-map" id="map-1960" usemap="#map1960">
+<map name="map1960">
+    <area shape="circle" coords="1300,750,25" href="#" class="map-area" />
+    <area shape="rect" coords="1400,1300,1500,1400" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1961.png" alt="Карта России 1961 года" class="historical-map" id="map-1961" usemap="#map1961">
+<map name="map1961">
+    <area shape="circle" coords="1320,760,25" href="#" class="map-area" />
+    <area shape="rect" coords="1420,1320,1520,1420" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1962.png" alt="Карта России 1962 года" class="historical-map" id="map-1962" usemap="#map1962">
+<map name="map1962">
+    <area shape="circle" coords="1340,770,25" href="#" class="map-area" />
+    <area shape="rect" coords="1440,1340,1540,1440" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1963.png" alt="Карта России 1963 года" class="historical-map" id="map-1963" usemap="#map1963">
+<map name="map1963">
+    <area shape="circle" coords="1360,780,25" href="#" class="map-area" />
+    <area shape="rect" coords="1460,1360,1560,1460" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1964.png" alt="Карта России 1964 года" class="historical-map" id="map-1964" usemap="#map1964">
+<map name="map1964">
+    <area shape="circle" coords="1380,790,25" href="#" class="map-area" />
+    <area shape="rect" coords="1480,1380,1580,1480" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1965.png" alt="Карта России 1965 года" class="historical-map" id="map-1965" usemap="#map1965">
+<map name="map1965">
+    <area shape="circle" coords="1400,800,25" href="#" class="map-area" />
+    <area shape="rect" coords="1500,1400,1600,1500" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1966.png" alt="Карта России 1966 года" class="historical-map" id="map-1966" usemap="#map1966">
+<map name="map1966">
+    <area shape="circle" coords="1420,810,25" href="#" class="map-area" />
+    <area shape="rect" coords="1520,1420,1620,1520" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1967.png" alt="Карта России 1967 года" class="historical-map" id="map-1967" usemap="#map1967">
+<map name="map1967">
+    <area shape="circle" coords="1440,820,25" href="#" class="map-area" />
+    <area shape="rect" coords="1540,1440,1640,1540" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1968.png" alt="Карта России 1968 года" class="historical-map" id="map-1968" usemap="#map1968">
+<map name="map1968">
+    <area shape="circle" coords="1460,830,25" href="#" class="map-area" />
+    <area shape="rect" coords="1560,1460,1660,1560" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1969.png" alt="Карта России 1969 года" class="historical-map" id="map-1969" usemap="#map1969">
+<map name="map1969">
+    <area shape="circle" coords="1480,840,25" href="#" class="map-area" />
+    <area shape="rect" coords="1580,1480,1680,1580" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1970.png" alt="Карта России 1970 года" class="historical-map" id="map-1970" usemap="#map1970">
+<map name="map1970">
+    <area shape="circle" coords="1500,850,25" href="#" class="map-area" />
+    <area shape="rect" coords="1600,1500,1700,1600" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1971.png" alt="Карта России 1971 года" class="historical-map" id="map-1971" usemap="#map1971">
+<map name="map1971">
+    <area shape="circle" coords="1520,860,25" href="#" class="map-area" />
+    <area shape="rect" coords="1620,1520,1720,1620" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1972.png" alt="Карта России 1972 года" class="historical-map" id="map-1972" usemap="#map1972">
+<map name="map1972">
+    <area shape="circle" coords="1540,870,25" href="#" class="map-area" />
+    <area shape="rect" coords="1640,1540,1740,1640" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1973.png" alt="Карта России 1973 года" class="historical-map" id="map-1973" usemap="#map1973">
+<map name="map1973">
+    <area shape="circle" coords="1560,880,25" href="#" class="map-area" />
+    <area shape="rect" coords="1660,1560,1760,1660" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1974.png" alt="Карта России 1974 года" class="historical-map" id="map-1974" usemap="#map1974">
+<map name="map1974">
+    <area shape="circle" coords="1580,890,25" href="#" class="map-area" />
+    <area shape="rect" coords="1680,1580,1780,1680" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1975.png" alt="Карта России 1975 года" class="historical-map" id="map-1975" usemap="#map1975">
+<map name="map1975">
+    <area shape="circle" coords="1600,900,25" href="#" class="map-area" />
+    <area shape="rect" coords="1700,1600,1800,1700" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1976.png" alt="Карта России 1976 года" class="historical-map" id="map-1976" usemap="#map1976">
+<map name="map1976">
+    <area shape="circle" coords="1620,910,25" href="#" class="map-area" />
+    <area shape="rect" coords="1720,1620,1820,1720" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1977.png" alt="Карта России 1977 года" class="historical-map" id="map-1977" usemap="#map1977">
+<map name="map1977">
+    <area shape="circle" coords="1640,920,25" href="#" class="map-area" />
+    <area shape="rect" coords="1740,1640,1840,1740" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1978.png" alt="Карта России 1978 года" class="historical-map" id="map-1978" usemap="#map1978">
+<map name="map1978">
+    <area shape="circle" coords="1660,930,25" href="#" class="map-area" />
+    <area shape="rect" coords="1760,1660,1860,1760" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1979.png" alt="Карта России 1979 года" class="historical-map" id="map-1979" usemap="#map1979">
+<map name="map1979">
+    <area shape="circle" coords="1680,940,25" href="#" class="map-area" />
+    <area shape="rect" coords="1780,1680,1880,1780" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1980.png" alt="Карта России 1980 года" class="historical-map" id="map-1980" usemap="#map1980">
+<map name="map1980">
+    <area shape="circle" coords="1700,950,25" href="#" class="map-area" />
+    <area shape="rect" coords="1800,1700,1900,1800" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1981.png" alt="Карта России 1981 года" class="historical-map" id="map-1981" usemap="#map1981">
+<map name="map1981">
+    <area shape="circle" coords="1720,960,25" href="#" class="map-area" />
+    <area shape="rect" coords="1800,1720,1900,1820" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1982.png" alt="Карта России 1982 года" class="historical-map" id="map-1982" usemap="#map1982">
+<map name="map1982">
+    <area shape="circle" coords="1740,970,25" href="#" class="map-area" />
+    <area shape="rect" coords="1820,1740,1920,1840" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1983.png" alt="Карта России 1983 года" class="historical-map" id="map-1983" usemap="#map1983">
+<map name="map1983">
+    <area shape="circle" coords="1760,980,25" href="#" class="map-area" />
+    <area shape="rect" coords="1840,1760,1940,1860" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1984.png" alt="Карта России 1984 года" class="historical-map" id="map-1984" usemap="#map1984">
+<map name="map1984">
+    <area shape="circle" coords="1780,990,25" href="#" class="map-area" />
+    <area shape="rect" coords="1860,1780,1960,1880" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1985.png" alt="Карта России 1985 года" class="historical-map" id="map-1985" usemap="#map1985">
+<map name="map1985">
+    <area shape="circle" coords="1800,1000,25" href="#" class="map-area" />
+    <area shape="rect" coords="1880,1800,1980,1900" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1986.png" alt="Карта России 1986 года" class="historical-map" id="map-1986" usemap="#map1986">
+<map name="map1986">
+    <area shape="circle" coords="1820,1010,25" href="#" class="map-area" />
+    <area shape="rect" coords="1900,1820,2000,1920" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1987.png" alt="Карта России 1987 года" class="historical-map" id="map-1987" usemap="#map1987">
+<map name="map1987">
+    <area shape="circle" coords="1840,1020,25" href="#" class="map-area" />
+    <area shape="rect" coords="1920,1840,2020,1940" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1988.png" alt="Карта России 1988 года" class="historical-map" id="map-1988" usemap="#map1988">
+<map name="map1988">
+    <area shape="circle" coords="1860,1030,25" href="#" class="map-area" />
+    <area shape="rect" coords="1940,1860,2040,1960" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1989.png" alt="Карта России 1989 года" class="historical-map" id="map-1989" usemap="#map1989">
+<map name="map1989">
+    <area shape="circle" coords="1880,1040,25" href="#" class="map-area" />
+    <area shape="rect" coords="1960,1880,2060,1980" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1990.png" alt="Карта России 1990 года" class="historical-map" id="map-1990" usemap="#map1990">
+<map name="map1990">
+    <area shape="circle" coords="1900,1050,25" href="#" class="map-area" />
+    <area shape="rect" coords="1980,1900,2080,2000" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1991.png" alt="Карта России 1991 года" class="historical-map" id="map-1991" usemap="#map1991">
+<map name="map1991">
+    <area shape="circle" coords="1920,1060,25" href="#" class="map-area" />
+    <area shape="rect" coords="2000,1920,2100,2020" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1992.png" alt="Карта России 1992 года" class="historical-map" id="map-1992" usemap="#map1992">
+<map name="map1992">
+    <area shape="circle" coords="1940,1070,25" href="#" class="map-area" />
+    <area shape="rect" coords="2020,1940,2120,2040" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1993.png" alt="Карта России 1993 года" class="historical-map" id="map-1993" usemap="#map1993">
+<map name="map1993">
+    <area shape="circle" coords="1960,1080,25" href="#" class="map-area" />
+    <area shape="rect" coords="2040,1960,2140,2060" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1994.png" alt="Карта России 1994 года" class="historical-map" id="map-1994" usemap="#map1994">
+<map name="map1994">
+    <area shape="circle" coords="1980,1090,25" href="#" class="map-area" />
+    <area shape="rect" coords="2060,1980,2160,2080" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1995.png" alt="Карта России 1995 года" class="historical-map" id="map-1995" usemap="#map1995">
+<map name="map1995">
+    <area shape="circle" coords="2000,1100,25" href="#" class="map-area" />
+    <area shape="rect" coords="2080,2000,2180,2100" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1996.png" alt="Карта России 1996 года" class="historical-map" id="map-1996" usemap="#map1996">
+<map name="map1996">
+    <area shape="circle" coords="2020,1110,25" href="#" class="map-area" />
+    <area shape="rect" coords="2100,2020,2200,2120" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1997.png" alt="Карта России 1997 года" class="historical-map" id="map-1997" usemap="#map1997">
+<map name="map1997">
+    <area shape="circle" coords="2040,1120,25" href="#" class="map-area" />
+    <area shape="rect" coords="2120,2040,2220,2140" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1998.png" alt="Карта России 1998 года" class="historical-map" id="map-1998" usemap="#map1998">
+<map name="map1998">
+    <area shape="circle" coords="2060,1130,25" href="#" class="map-area" />
+    <area shape="rect" coords="2140,2060,2240,2160" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-1999.png" alt="Карта России 1999 года" class="historical-map" id="map-1999" usemap="#map1999">
+<map name="map1999">
+    <area shape="circle" coords="2080,1140,25" href="#" class="map-area" />
+    <area shape="rect" coords="2160,2080,2260,2180" href="#" class="map-area" />
+</map>
+
+<img src="russia-map-2000.png" alt="Карта России 2000 года" class="historical-map" id="map-2000" usemap="#map2000">
+<map name="map2000">
+    <area shape="circle" coords="2100,1150,25" href="#" class="map-area" />
+    <area shape="rect" coords="2180,2100,2280,2200" href="#" class="map-area" />
+</map>
+
+    </div>
+    <label for="yearSelect">Выбрать год:</label>
+    <select id="yearSelect" onchange="showMap()">
+        <option value="1899">Выберите год</option>
+        <option value="1900">1900</option>
+        <option value="1901">1901</option>
+        <option value="1902">1902</option>
+        <option value="1903">1903</option>
+        <option value="1904">1904</option>
+        <option value="1905">1905</option>
+        <option value="1906">1906</option>
+        <option value="1907">1907</option>
+        <option value="1908">1908</option>
+        <option value="1909">1909</option>
+        <option value="1910">1910</option>
+        <option value="1911">1911</option>
+        <option value="1912">1912</option>
+        <option value="1913">1913</option>
+        <option value="1914">1914</option>
+        <option value="1915">1915</option>
+        <option value="1916">1916</option>
+        <option value="1917">1917</option>
+        <option value="1918">1918</option>
+        <option value="1919">1919</option>
+        <option value="1920">1920</option>
+        <option value="1921">1921</option>
+        <option value="1922">1922</option>
+        <option value="1923">1923</option>
+        <option value="1924">1924</option>
+        <option value="1925">1925</option>
+        <option value="1926">1926</option>
+        <option value="1927">1927</option>
+        <option value="1928">1928</option>
+        <option value="1929">1929</option>
+        <option value="1930">1930</option>
+        <option value="1931">1931</option>
+        <option value="1932">1932</option>
+        <option value="1933">1933</option>
+        <option value="1934">1934</option>
+        <option value="1935">1935</option>
+        <option value="1936">1936</option>
+        <option value="1937">1937</option>
+        <option value="1938">1938</option>
+        <option value="1939">1939</option>
+        <option value="1940">1940</option>
+        <option value="1941">1941</option>
+        <option value="1942">1942</option>
+        <option value="1943">1943</option>
+        <option value="1944">1944</option>
+        <option value="1945">1945</option>
+        <option value="1946">1946</option>
+        <option value="1947">1947</option>
+        <option value="1948">1948</option>
+        <option value="1949">1949</option>
+        <option value="1950">1950</option>
+        <option value="1951">1951</option>
+        <option value="1952">1952</option>
+        <option value="1953">1953</option>
+        <option value="1954">1954</option>
+        <option value="1955">1955</option>
+        <option value="1956">1956</option>
+        <option value="1957">1957</option>
+        <option value="1958">1958</option>
+        <option value="1959">1959</option>
+        <option value="1960">1960</option>
+        <option value="1961">1961</option>
+        <option value="1962">1962</option>
+        <option value="1963">1963</option>
+        <option value="1964">1964</option>
+        <option value="1965">1965</option>
+        <option value="1966">1966</option>
+        <option value="1967">1967</option>
+        <option value="1968">1968</option>
+        <option value="1969">1969</option>
+        <option value="1970">1970</option>
+        <option value="1971">1971</option>
+        <option value="1972">1972</option>
+        <option value="1973">1973</option>
+        <option value="1974">1974</option>
+        <option value="1975">1975</option>
+        <option value="1976">1976</option>
+        <option value="1977">1977</option>
+        <option value="1978">1978</option>
+        <option value="1979">1979</option>
+        <option value="1980">1980</option>
+        <option value="1981">1981</option>
+        <option value="1982">1982</option>
+        <option value="1983">1983</option>
+        <option value="1984">1984</option>
+        <option value="1985">1985</option>
+        <option value="1986">1986</option>
+        <option value="1987">1987</option>
+        <option value="1988">1988</option>
+        <option value="1989">1989</option>
+        <option value="1990">1990</option>
+        <option value="1991">1991</option>
+        <option value="1992">1992</option>
+        <option value="1993">1993</option>
+        <option value="1994">1994</option>
+        <option value="1995">1995</option>
+        <option value="1996">1996</option>
+        <option value="1997">1997</option>
+        <option value="1998">1998</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+    </select>
+
+    <div id="selectedYearDescription"></div>
+    <div id="eventDescription"></div>
+
+    <script>
+        function showMap() {
+            const maps = document.querySelectorAll('.historical-map');
+            maps.forEach(map => map.style.display = 'none');
+
+            const yearSelect = document.getElementById('yearSelect');
+            const selectedYear = yearSelect.value;
+
+            if (selectedYear) {
+                const selectedMap = document.getElementById(`map-${selectedYear}`);
+                selectedMap.style.display = 'block';
+
+                // Обновление описания выбранной карты
+
+                const selectedYearDescription = document.getElementById('selectedYearDescription');
+                if (selectedYear == 1899) {
+                selectedYearDescription.innerText = 'Ничего не выбрано'
+                selectedYearDescription.style.display = 'block'}
+                else
+                {
+                  selectedYearDescription.innerText = `Выбрана карта ${selectedYear} года`;
+                  selectedYearDescription.style.display = 'block';
+                }
+                // Отображение событий для выбранного года
+                const eventDescription = document.getElementById('eventDescription');
+                switch (selectedYear) {
+                  case '1899':
+                      eventDescription.innerHTML = '-';
+                      break;
+                  case '1900':
+                      eventDescription.innerHTML = '<strong>Событие 1900:</strong> Введение в действие нового законодательства о рабочем движении.';
+                      break;
+                  case '1901':
+                      eventDescription.innerHTML = '<strong>Событие 1901:</strong> Установление первой в России стачечной комиссии в Санкт-Петербурге.';
+                      break;
+                  case '1902':
+                      eventDescription.innerHTML = '<strong>Событие 1902:</strong> Начало массовых забастовок в России.';
+                      break;
+                  case '1903':
+                      eventDescription.innerHTML = '<strong>Событие 1903:</strong> II съезд РСДРП и раскол на большевиков и меньшевиков.';
+                      break;
+                  case '1904':
+                      eventDescription.innerHTML = '<strong>Событие 1904:</strong> Русско-японская война началась.';
+                      break;
+                  case '1905':
+                      eventDescription.innerHTML = '<strong>Событие 1905:</strong> Русская революция: выступления рабочих, создание Советов.';
+                      break;
+                  case '1906':
+                      eventDescription.innerHTML = '<strong>Событие 1906:</strong> Образование первой Государственной Думы.';
+                      break;
+                  case '1907':
+                      eventDescription.innerHTML = '<strong>Событие 1907:</strong> Реформа выборов, радикальное уменьшение влияния крестьян.';
+                      break;
+                  case '1908':
+                      eventDescription.innerHTML = '<strong>Событие 1908:</strong> Образование нового состава Государственной Думы.';
+                      break;
+                  case '1909':
+                      eventDescription.innerHTML = '<strong>Событие 1909:</strong> Принятие новых законов, улучшающих положение рабочих.';
+                      break;
+                  case '1910':
+                      eventDescription.innerHTML = '<strong>Событие 1910:</strong> Увеличение социальных протестов и стачек.';
+                      break;
+                  case '1911':
+                      eventDescription.innerHTML = '<strong>Событие 1911:</strong> Убийство премьер-министра Столыпина.';
+                      break;
+                  case '1912':
+                      eventDescription.innerHTML = '<strong>Событие 1912:</strong> Ленин и большевики ведут активную агитацию среди рабочих.';
+                      break;
+                  case '1913':
+                      eventDescription.innerHTML = '<strong>Событие 1913:</strong> Столетие дома Романовых.';
+                      break;
+                  case '1914':
+                      eventDescription.innerHTML = '<strong>Событие 1914:</strong> Начало Первой мировой войны, Россия в союзе с Антантой.';
+                      break;
+                  case '1915':
+                      eventDescription.innerHTML = '<strong>Событие 1915:</strong> Серьезные военные поражения русской армии.';
+                      break;
+                  case '1916':
+                      eventDescription.innerHTML = '<strong>Событие 1916:</strong> Брусиловский прорыв, успешная операция русской армии.';
+                      break;
+                  case '1917':
+                      eventDescription.innerHTML = '<strong>Событие 1917:</strong> Февральская и Октябрьская революции, приход к власти большевиков.';
+                      break;
+                  case '1918':
+                      eventDescription.innerHTML = '<strong>Событие 1918:</strong> Начало Гражданской войны в России.';
+                      break;
+                  case '1919':
+                      eventDescription.innerHTML = '<strong>Событие 1919:</strong> Участие Советской России в международной борьбе с интервентами.';
+                      break
+                  case '1920':
+                      eventDescription.innerHTML = '<strong>Событие 1920:</strong> Окончание Гражданской войны, установление советской власти.';
+                      break
+                  case '1921':
+                      eventDescription.innerHTML = '<strong>Событие 1921:</strong> Начало НЭПа, восстановление экономики после Гражданской войны.';
+                      break;
+                  case '1922':
+                      eventDescription.innerHTML = '<strong>Событие 1922:</strong> Принятие декларации о формировании СССР.';
+                      break;
+                  case '1923':
+                      eventDescription.innerHTML = '<strong>Событие 1923:</strong> Консолидация власти Советов; улучшение экономического положения.';
+                      break;
+                  case '1924':
+                      eventDescription.innerHTML = '<strong>Событие 1924:</strong> Умер Владимир Ленин; мавзолей на Красной площади.';
+                      break;
+                  case '1925':
+                      eventDescription.innerHTML = '<strong>Событие 1925:</strong> Принятие новой программы партии; усиление сталинизма.';
+                      break;
+                  case '1926':
+                      eventDescription.innerHTML = '<strong>Событие 1926:</strong> Обострение классовой борьбы; борьба с оппозиционными группами.';
+                      break;
+                  case '1927':
+                      eventDescription.innerHTML = '<strong>Событие 1927:</strong> Заключение очередного договора с Западом; рост политической репрессии.';
+                      break;
+                  case '1928':
+                      eventDescription.innerHTML = '<strong>Событие 1928:</strong> Начало первой пятилетки, индустриализация и коллективизация.';
+                      break;
+                  case '1929':
+                      eventDescription.innerHTML = '<strong>Событие 1929:</strong> Начало массовой коллективизации, репрессии против крестьян.';
+                      break;
+                  case '1930':
+                      eventDescription.innerHTML = '<strong>Событие 1930:</strong> Операция "Культура" и усиление контроля над культурной жизнью.';
+                      break;
+                  case '1931':
+                      eventDescription.innerHTML = '<strong>Событие 1931:</strong> Голод в СССР; ужесточение режимов коллективизации.';
+                      break;
+                  case '1932':
+                      eventDescription.innerHTML = '<strong>Событие 1932:</strong> Утверждение "Закона о пшенице", наказания за недоимки.';
+                      break;
+                  case '1933':
+                      eventDescription.innerHTML = '<strong>Событие 1933:</strong> Начало массовых репрессий среди политических элит.';
+                      break;
+                  case '1934':
+                      eventDescription.innerHTML = '<strong>Событие 1934:</strong> Принятие новой конституции; массовые репрессии.';
+                      break;
+                  case '1935':
+                      eventDescription.innerHTML = '<strong>Событие 1935:</strong> Установление культа личности Сталина; укрепление партии.';
+                      break;
+                  case '1936':
+                      eventDescription.innerHTML = '<strong>Событие 1936:</strong> Начало Большого террора; репрессии против военных.';
+                      break;
+                  case '1937':
+                      eventDescription.innerHTML = '<strong>Событие 1937:</strong> Массовые аресты, казни; финал Большого террора.';
+                      break;
+                  case '1938':
+                      eventDescription.innerHTML = '<strong>Событие 1938:</strong> Заключительные этапы репрессий; разрушение политической оппозиции.';
+                      break;
+                  case '1939':
+                      eventDescription.innerHTML = '<strong>Событие 1939:</strong> Начало Второй мировой войны; пакт о ненападении с Германией.';
+                      break;
+                  case '1940':
+                      eventDescription.innerHTML = '<strong>Событие 1940:</strong> Обострение международной обстановки; подготовка к войне.';
+                      break;
+                  case '1941':
+                      eventDescription.innerHTML = '<strong>Событие 1941:</strong> Нападение Германии на СССР (22 июня); начало Великой Отечественной войны.';
+                      break;
+                  case '1942':
+                      eventDescription.innerHTML = '<strong>Событие 1942:</strong> Сталинградская битва; тяжелые потери для Красной армии.';
+                      break;
+                  case '1943':
+                      eventDescription.innerHTML = '<strong>Событие 1943:</strong> Поворотный момент в войне; победа под Сталинградом.';
+                      break;
+                  case '1944':
+                      eventDescription.innerHTML = '<strong>Событие 1944:</strong> Освобождение территорий СССР; подготовка к завершению войны.';
+                      break;
+                  case '1945':
+                      eventDescription.innerHTML = '<strong>Событие 1945:</strong> Завершение войны; победа над нацистской Германией (9 мая).';
+                      break;
+                  case '1946':
+                      eventDescription.innerHTML = '<strong>Событие 1946:</strong> Начало послевоенного восстановления, борьба с голодом.';
+                      break;
+                  case '1947':
+                      eventDescription.innerHTML = '<strong>Событие 1947:</strong> Принятие плана Маршалла, начало холодной войны.';
+                      break;
+                  case '1948':
+                      eventDescription.innerHTML = '<strong>Событие 1948:</strong> Ужесточение репрессий; большее внимание к внутренним делам.';
+                      break;
+                  case '1949':
+                      eventDescription.innerHTML = '<strong>Событие 1949:</strong> Испытание атомной бомбы в СССР.';
+                      break;
+                  case '1950':
+                      eventDescription.innerHTML = '<strong>Событие 1950:</strong> Напряженность в международной политике; начало Корейской войны.';
+                      break;
+                  case '1951':
+                      eventDescription.innerHTML = '<strong>Событие 1951:</strong> Участие СССР в Корейской войне; начало противостояния с США.';
+                      break;
+                  case '1952':
+                      eventDescription.innerHTML = '<strong>Событие 1952:</strong> Проведение 19-го съезда КПСС; продолжающаяся политизация общества.';
+                      break;
+                  case '1953':
+                      eventDescription.innerHTML = '<strong>Событие 1953:</strong> Смерть Иосифа Сталина; начало десталинизации под руководством Хрущева.';
+                      break;
+                  case '1954':
+                      eventDescription.innerHTML = '<strong>Событие 1954:</strong> Запуск первой атомной электростанции в Обнинске.';
+                      break;
+                  case '1955':
+                      eventDescription.innerHTML = '<strong>Событие 1955:</strong> Создание Варшавского договора; ответ на НАТО.';
+                      break;
+                  case '1956':
+                      eventDescription.innerHTML = '<strong>Событие 1956:</strong> XX съезд КПСС; разоблачение культа личности Сталина.';
+                      break;
+                  case '1957':
+                      eventDescription.innerHTML = '<strong>Событие 1957:</strong> Запуск первого спутника Земли; начало космической эры.';
+                      break;
+                  case '1958':
+                      eventDescription.innerHTML = '<strong>Событие 1958:</strong> Реформа образования; введение новых учебных планов.';
+                      break;
+                  case '1959':
+                      eventDescription.innerHTML = '<strong>Событие 1959:</strong> Участие СССР в международной выставке в Брюсселе; демонстрация достижений.';
+                      break;
+                  case '1960':
+                      eventDescription.innerHTML = '<strong>Событие 1960:</strong> Напряженность в отношениях с Западом; кризисы в разведке и политике.';
+                      break;
+                  case '1961':
+                      eventDescription.innerHTML = '<strong>Событие 1961:</strong> Полет Юрия Гагарина в космос; первый человек в космосе.';
+                      break;
+                  case '1962':
+                      eventDescription.innerHTML = '<strong>Событие 1962:</strong> Кубинский кризис; мир на грани ядерной войны.';
+                      break;
+                  case '1963':
+                      eventDescription.innerHTML = '<strong>Событие 1963:</strong> Подписание договора о запрещении испытаний ядерного оружия.';
+                      break;
+                  case '1964':
+                      eventDescription.innerHTML = '<strong>Событие 1964:</strong> Свержение Хрущева; начало правления Леонида Брежнева.';
+                      break;
+                  case '1965':
+                      eventDescription.innerHTML = '<strong>Событие 1965:</strong> Начало экономической реформы; попытки модернизации экономики.';
+                      break;
+                  case '1966':
+                      eventDescription.innerHTML = '<strong>Событие 1966:</strong> Усиление контроля над культурой и искусством; борьба с диссидентами.';
+                      break;
+                  case '1967':
+                      eventDescription.innerHTML = '<strong>Событие 1967:</strong> Декларирование обещаний «шестой пятилетки»; трудности в экономике.';
+                      break;
+                  case '1968':
+                      eventDescription.innerHTML = '<strong>Событие 1968:</strong> Пражская весна; введение войск Варшавского договора в Чехословакию.';
+    break;
+case '1969':
+    eventDescription.innerHTML = '<strong>Событие 1969:</strong> Договор о контроле над стратегическими оружиями с США.';
+    break;
+case '1970':
+    eventDescription.innerHTML = '<strong>Событие 1970:</strong> Подписание договора о нераспространении ядерного оружия.';
+    break;
+case '1971':
+    eventDescription.innerHTML = '<strong>Событие 1971:</strong> Открытие первого детского дома для детей-инвалидов в СССР.';
+    break;
+case '1972':
+    eventDescription.innerHTML = '<strong>Событие 1972:</strong> Подписание SALT I; ограничение стратегических вооружений с США.';
+    break;
+case '1973':
+    eventDescription.innerHTML = '<strong>Событие 1973:</strong> Участие СССР в Берлинской конференции; усиление отношений с Восточным блоком.';
+    break;
+case '1974':
+    eventDescription.innerHTML = '<strong>Событие 1974:</strong> Подписание Московского договора о дружбе с Ираком.';
+    break;
+case '1975':
+    eventDescription.innerHTML = '<strong>Событие 1975:</strong> Заключение Хельсинкских соглашений; признание границ в Европе.';
+    break;
+case '1976':
+    eventDescription.innerHTML = '<strong>Событие 1976:</strong> Возникновение диссидентского движения; арест активистов.';
+    break;
+case '1977':
+    eventDescription.innerHTML = '<strong>Событие 1977:</strong> Принятие новой Конституции СССР; продолжающийся авторитаризм.';
+    break;
+case '1978':
+    eventDescription.innerHTML = '<strong>Событие 1978:</strong> Кандидат на пост генерального секретаря; борьба за власть в КПСС.';
+    break;
+case '1979':
+    eventDescription.innerHTML = '<strong>Событие 1979:</strong> Ввод советских войск в Афганистан; начало долгой войны.';
+    break;
+case '1980':
+    eventDescription.innerHTML = '<strong>Событие 1980:</strong> Олимпийские игры в Москве; бойкот со стороны западных стран.';
+    break;
+case '1981':
+    eventDescription.innerHTML = '<strong>Событие 1981:</strong> Усиление репрессий против диссидентов; борьба за права человека.';
+    break;
+case '1982':
+    eventDescription.innerHTML = '<strong>Событие 1982:</strong> Смерть Леонида Брежнева; начальные изменения в руководстве страны.';
+    break;
+case '1983':
+    eventDescription.innerHTML = '<strong>Событие 1983:</strong> Аман – заместитель генсека; подготовка к реформам.';
+    break;
+case '1984':
+    eventDescription.innerHTML = '<strong>Событие 1984:</strong> Возвышение Михаила Горбачева на пост генсека; начало перестройки.';
+    break;
+case '1985':
+    eventDescription.innerHTML = '<strong>Событие 1985:</strong> Проведение политики гласности и перестройки; открытие доступа к информации.';
+    break;
+case '1986':
+    eventDescription.innerHTML = '<strong>Событие 1986:</strong> Чернобыльская катастрофа; последствия для здравоохранения и экологии.';
+    break;
+case '1987':
+    eventDescription.innerHTML = '<strong>Событие 1987:</strong> Начало экономических реформ; тяжёлое положение в экономике.';
+    break;
+case '1988':
+    eventDescription.innerHTML = '<strong>Событие 1988:</strong> Ослабление цензуры; начало демократизации общества.';
+    break;
+case '1989':
+    eventDescription.innerHTML = '<strong>Событие 1989:</strong> Падение Берлинской стены; окончание холодной войны.';
+    break;
+case '1990':
+    eventDescription.innerHTML = '<strong>Событие 1990:</strong> Принятие закона о кооперативах и малом бизнесе; непосредственные реформы.';
+    break;
+case '1991':
+    eventDescription.innerHTML = '<strong>Событие 1991:</strong> Результаты августовского путча; распад СССР и конец социализма в стране.';
+    break;
+case '1992':
+    eventDescription.innerHTML = '<strong>Событие 1992:</strong> Начало экономических реформ; переход к рыночной экономике.';
+    break;
+case '1993':
+    eventDescription.innerHTML = '<strong>Событие 1993:</strong> Конституционный кризис и столкновения в Москве; выборы в парламент.';
+    break;
+case '1994':
+    eventDescription.innerHTML = '<strong>Событие 1994:</strong> Начало Чеченской войны; вооруженный конфликт в России.';
+    break;
+case '1995':
+    eventDescription.innerHTML = '<strong>Событие 1995:</strong> Экономические трудности; продолжающаяся инфляция и падение уровня жизни.';
+    break;
+case '1996':
+    eventDescription.innerHTML = '<strong>Событие 1996:</strong> Выборы президента; победа Бориса Ельцина.';
+    break;
+case '1997':
+    eventDescription.innerHTML = '<strong>Событие 1997:</strong> Реформа системы социального обеспечения; последствия для населения.';
+    break;
+case '1998':
+    eventDescription.innerHTML = '<strong>Событие 1998:</strong> Финансовый кризис в России; дефолт и девальвация рубля.';
+    break;
+case '1999':
+    eventDescription.innerHTML = '<strong>Событие 1999:</strong> Начало Второй чеченской войны; новые военные действия в Кавказе.';
+    break;
+case '2000':
+    eventDescription.innerHTML = '<strong>Событие 2000:</strong> Избрание Владимира Путина президентом; начало новой эпохи в политике России.';
+    break;
+
+                    default:
+                        eventDescription.innerHTML = '';
+                        break;
+                }
+                eventDescription.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
